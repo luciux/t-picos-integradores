@@ -1,0 +1,5 @@
+Tópicos integradores - Entrega de uma mercadoria pela transportadora.
+
+Esse caso de uso foca em descrever o envio de uma mercadoria para seu destinatário através de uma transportadora. Para essa finalidade vamos supor que o cliente já tem definida a empresa que irá realizar o processo. A partir disso, o cliente realiza uma cotação para avaliar se o preço do serviço condiz com sua expectativa e realidade do mercado. Com a cotação realizada, caso o preço seja o condizente, ele segue com o processo e solicita uma coleta do produto na sua empresa, caso contrário ele busca uma segunda alternativa. 
+Para o serviço de coleta é necessário ter as informações do cliente, como seu endereço e dados de cobrança, já coletados no momento da cotação. Após a coleta realizada, a mercadoria segue para um centro de distribuição para ser direcionada para a linha, que realizará o transporte até o destinatário da mercadoria.
+Após o traslado da mercadoria até a cidade do destinatário, é necessário fazer a entrega até o endereço do cliente. 

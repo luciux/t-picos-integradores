@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+actor "Cliente Remetente" as remetente
+actor "Transportadora" as transportadora
+rectangle Transporte {
+  usecase "Solicita Cotação" as cotacao
+  usecase "Aprova Cotação" as aprovacao
+  usecase "Coleta Mercadoria" as coleta
+  usecase "Inicia Transporte" as transporte
+}
+remetente --> cotacao
+
+@enduml
