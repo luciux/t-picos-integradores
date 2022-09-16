@@ -1,13 +1,28 @@
 @startuml
-left to right direction
+top to bottom direction
 actor "Cliente Remetente" as remetente
 actor "Transportadora" as transportadora
+actor "Cliente Destinatário" as destinatario
 rectangle Transporte {
   usecase "Solicita Cotação" as cotacao
   usecase "Aprova Cotação" as aprovacao
   usecase "Coleta Mercadoria" as coleta
-  usecase "Inicia Transporte" as transporte
+  usecase "Inicia Transporte" as transporteInicio
+  usecase "Finaliza Transporte" as transporteFim
+  usecase "Entrega Mercadoria" as entrega
 }
+(cotacao) <|--(aprovacao)
+(aprovacao) <|-- (coleta)
+(coleta) <|-- (transporteInicio)
+(transporteInicio) <|-- (transporteFim)
+(transporteFim) <|-- (entrega)
 remetente --> cotacao
+remetente --> aprovacao
+transportadora --> coleta
+transportadora --> transporteInicio
+transportadora --> transporteFim
+transportadora --> entrega
+destinatario <-- entrega
+
 
 @enduml
